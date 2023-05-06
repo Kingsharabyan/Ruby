@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ساعت</title>
+</head>
+<body>
+
+	<h1>ساعت فعلی:</h1>
+	<p id="time"></p>
+
+	<script>
+		var time = document.getElementById("time");
+
+		function updateTime() {
+			var date = new Date();
+			var hours = date.getHours();
+			var minutes = date.getMinutes();
+			var seconds = date.getSeconds();
+
+			time.innerHTML = hours + ":" + minutes + ":" + seconds;
+		}
+
+		setInterval(updateTime, 1000);
+	</script>
+
+</body>
+</html>
